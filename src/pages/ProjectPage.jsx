@@ -36,13 +36,17 @@ const SectionTitle = styled.h2`
   margin-bottom: 16px;
   font-size: 24px;
   color: #333; /* Cor do texto */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;
 
 const MediaContainer = styled.div`
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Modal = styled.div`
@@ -207,6 +211,7 @@ sobre a distribuição de banda e conectividade wi-fi do seu roteador assim fora
       ],
       videos: [
         "http://thummi.global/wp-content/uploads/2023/12/home_thummi_desktop.mp4",
+        "https://www.youtube.com/watch?v=MPL9LW6Ifw4",
       ],
 
       links: {

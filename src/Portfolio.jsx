@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 // Definir fontes e cores
 const fonts = {
@@ -85,7 +86,7 @@ const PortfolioSection = styled.section`
 `;
 
 const Title = styled.h2`
-  font-size: 1rem;
+  font-size: 2.5rem;
   color: ${colors.text};
   margin-bottom: 20px;
   font-family: ${fonts.secondary};
@@ -97,11 +98,10 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: ${colors.descriptionText};
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   font-family: ${fonts.secondary};
-
   max-width: 1500px; /* Limita a largura da descrição */
   margin: 0 auto;
   line-height: 1.3; /* Aumenta a altura da linha para tornar o texto mais legível */
@@ -113,7 +113,7 @@ const ProfileImage = styled.img`
   height: 250px;
   object-fit: cover;
   border-radius: 50%;
-  margin-right: 24px;
+  margin-right: 35px;
   margin-bottom: 5px;
 `;
 
@@ -124,6 +124,18 @@ const AboutSection = styled.div`
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const WhatsAppLink = styled.a`
+  color: #25d366;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 const projects = [
@@ -157,30 +169,27 @@ export default function Portfolio() {
   return (
     <div>
       <PortfolioSection>
-        <Title>Sobre Mim</Title>
-        <ProfileImage src="my-photo.png" alt="Luan Santana Cerqueira" />
+        <Title>Oi, aqui é o Luan!</Title>
 
         <AboutSection>
+          <ProfileImage src="my-photo.png" alt="Luan Santana Cerqueira" />
+
           <Subtitle>
-            Sou desenvolvedor de software há 10 anos, especializado na criação
-            de soluções para aplicações web, mobile e IoT. Possuo experiência em
-            React Native, React.js, Node.js e MongoDB, desenvolvendo sistemas
-            escaláveis e seguros. Atuei em projetos do setor financeiro para
-            grandes instituições, como Banco do Brasil, Banco Original e
-            MoneyPag, contribuindo para a entrega de soluções que otimizam
-            processos, aumentam a produtividade e geram economia de tempo para
-            os usuários. Desenvolvi e implementei soluções IOT em um projeto
-            pessoal na REDGTECH Automação que resultaram em um faturamento
-            superior a R$ 1,5 milhão em vendas e mais de 1.500 clientes
-            atendidos. Atualmente, lidero a equipe técnica de desenvolvimento de
-            software neste projeto, garantindo a continuidade e eficiência da
-            operação.
+            Sou desenvolvedor de software há 10 anos. Já criei soluções para
+            aplicações web, mobile e IoT. Desenvolvo em React Native, React.js,
+            Node.js e MongoDB. Tenho experiência em projetos do setor
+            financeiro, iintegrei equipes de desenvolvimento para cliente como
+            como Banco do Brasil, Banco Original e MoneyPag. Desenvolvi e
+            implementei soluções IOT em um projeto pessoal na REDGTECH Automação
+            que resultaram em um faturamento superior a R$ 1,5 milhão em vendas
+            e mais de 1.500 clientes atendidos. Atualmente, lidero a equipe
+            técnica de desenvolvimento de software neste projeto.
           </Subtitle>
         </AboutSection>
       </PortfolioSection>
 
       <PortfolioSection>
-        <Title>Projetos</Title>
+        <Title>Projetos que já desenvolvi</Title>
         <Container>
           {projects.map((project, index) => (
             <Card
@@ -199,11 +208,19 @@ export default function Portfolio() {
 
       <PortfolioSection>
         <Title>Contato</Title>
-        <Subtitle>
-          Você pode entrar em contato comigo pelo e-mail{" "}
-          <strong>luannnvg@gmail.com</strong> ou através do telefone{" "}
-          <strong>(71) 9 8543-9973</strong>.
-        </Subtitle>
+        <AboutSection>
+          <Subtitle>
+            Você pode entrar em contato comigo pelo e-mail{" "}
+            <strong>luannnvg@gmail.com</strong> ou através do telefone
+            <WhatsAppLink
+              href="https://wa.me/5571985439973"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp size={20} /> (71) 9 8543-9973
+            </WhatsAppLink>
+          </Subtitle>
+        </AboutSection>
       </PortfolioSection>
     </div>
   );
