@@ -106,6 +106,10 @@ const Subtitle = styled.h3`
   margin: 0 auto;
   line-height: 1.3; /* Aumenta a altura da linha para tornar o texto mais legível */
   text-align: left;
+
+  @media (max-width: 768px) {
+    text-align: center; /* Alinha o texto ao centro em telas pequenas */
+  }
 `;
 
 const ProfileImage = styled.img`
@@ -115,6 +119,11 @@ const ProfileImage = styled.img`
   border-radius: 50%;
   margin-right: 35px;
   margin-bottom: 5px;
+
+  @media (max-width: 768px) {
+    margin-right: 0; /* Remove o espaço à direita da imagem em dispositivos móveis */
+    margin-bottom: 20px; /* Adiciona um espaçamento inferior quando a imagem fica acima */
+  }
 `;
 
 const AboutSection = styled.div`
@@ -124,6 +133,11 @@ const AboutSection = styled.div`
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Altera a direção para coluna em telas pequenas */
+    align-items: center;
+  }
 `;
 
 const WhatsAppLink = styled.a`
