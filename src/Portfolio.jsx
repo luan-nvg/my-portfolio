@@ -1,21 +1,21 @@
-import React from "react";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { FaWhatsapp } from "react-icons/fa";
+import React from "react"
+import styled from "styled-components"
+import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import { FaWhatsapp } from "react-icons/fa"
 
 // Definir fontes e cores
 const fonts = {
   primary: "'Roboto', sans-serif",
-  secondary: "'Poppins', sans-serif",
-};
+  secondary: "'Poppins', sans-serif"
+}
 
 const colors = {
   primary: "#007bff",
   secondary: "#0056b3",
   text: "black",
-  descriptionText: "#666",
-};
+  descriptionText: "#666"
+}
 
 const Container = styled.div`
   padding: 24px;
@@ -26,7 +26,7 @@ const Container = styled.div`
   place-items: center;
   min-width: 320px;
   font-family: ${fonts.primary};
-`;
+`
 
 const Card = styled(motion.div)`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@ const Card = styled(motion.div)`
   height: 400px;
   width: 300px;
   font-family: ${fonts.secondary};
-`;
+`
 
 const Image = styled.img`
   width: 100%;
@@ -48,7 +48,7 @@ const Image = styled.img`
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 16px;
-`;
+`
 
 const Description = styled.p`
   color: ${colors.descriptionText};
@@ -61,7 +61,7 @@ const Description = styled.p`
   height: 8.5rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
-`;
+`
 
 const Button = styled(Link)`
   display: inline-block;
@@ -76,14 +76,14 @@ const Button = styled(Link)`
   &:hover {
     background: ${colors.secondary};
   }
-`;
+`
 
 const PortfolioSection = styled.section`
   width: 100%;
   text-align: center;
   background-color: ${colors.background};
   place-items: center;
-`;
+`
 
 const Title = styled.h2`
   font-size: 2.5rem;
@@ -95,7 +95,7 @@ const Title = styled.h2`
   max-width: 90%; // Limita a largura
   margin-left: auto;
   margin-right: auto; // Centraliza o título na tela
-`;
+`
 
 const Subtitle = styled.h3`
   font-size: 1.2rem;
@@ -110,7 +110,7 @@ const Subtitle = styled.h3`
   @media (max-width: 768px) {
     text-align: center; /* Alinha o texto ao centro em telas pequenas */
   }
-`;
+`
 
 const ProfileImage = styled.img`
   width: 250px;
@@ -124,7 +124,7 @@ const ProfileImage = styled.img`
     margin-right: 0; /* Remove o espaço à direita da imagem em dispositivos móveis */
     margin-bottom: 20px; /* Adiciona um espaçamento inferior quando a imagem fica acima */
   }
-`;
+`
 
 const AboutSection = styled.div`
   display: flex;
@@ -138,7 +138,7 @@ const AboutSection = styled.div`
     flex-direction: column; /* Altera a direção para coluna em telas pequenas */
     align-items: center;
   }
-`;
+`
 
 const WhatsAppLink = styled.a`
   color: #25d366;
@@ -150,7 +150,7 @@ const WhatsAppLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
-`;
+`
 
 const projects = [
   {
@@ -158,26 +158,23 @@ const projects = [
     description:
       "A Redgtech Automação oferece produtos que atendem a diversos acionamentos, proporcionando praticidade em automação residencial e comercial.",
     link: "/project/1",
-    imageUrl:
-      "https://redgtech.com.br/wp-content/uploads/2023/01/landing-page-1024x600.png",
+    imageUrl: "/redgtech-card.png"
   },
   {
     title: "Intelbras",
     description:
       "Oferecemos soluções completas e com tecnologias inovadoras para resolver problemas e melhorar o dia a dia de empresas, trazendo-as para o futuro.",
     link: "/project/2",
-    imageUrl:
-      "https://s.zst.com.br/cms-assets/2021/12/roteador-intelbras-bom.webp",
+    imageUrl: "/intelbras-card.png"
   },
   {
     title: "Thummi",
     description:
       "Plataforma de monitoramento remoto do paciente oncológico para maior assertividade ao tratamento. Fundada por médicos oncologistas com ampla experiência na área.",
     link: "/project/3",
-    imageUrl:
-      "https://scontent.ffec1-1.fna.fbcdn.net/v/t39.30808-6/349015404_3330929823884361_8313608828649143719_n.png?_nc_cat=107&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeE1O6LkWSpG18IkOubudXtiq_hR6WVRV6yr-FHpZVFXrMcagvRlLhlh3kWYb4ZT1EnH8L11UOH5qi8ppdY6HXGi&_nc_ohc=5Dhdll-QbmAQ7kNvgH2daoa&_nc_oc=AdlCiahKnk3SQbxsVUbaaiSSnrHgR36SL0ycK3tQmNlbkRAhOGXVxdG2onN6d0Zm3os&_nc_zt=23&_nc_ht=scontent.ffec1-1.fna&_nc_gid=EGKztXycmDHEKBmqNVP3lA&oh=00_AYF9G_WyLJ75b2RoYdeJZqGan432H9jYu1YKbf-Rs4vVcQ&oe=67E0D6FA",
-  },
-];
+    imageUrl: "/thummi-card.png"
+  }
+]
 
 export default function Portfolio() {
   return (
@@ -237,5 +234,5 @@ export default function Portfolio() {
         </AboutSection>
       </PortfolioSection>
     </div>
-  );
+  )
 }
