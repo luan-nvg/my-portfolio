@@ -189,7 +189,7 @@ export default function Portfolio() {
             Sou desenvolvedor de software há 10 anos. Já criei soluções para
             aplicações web, mobile e IoT. Desenvolvo em React Native, React.js,
             Node.js e MongoDB. Tenho experiência em projetos do setor
-            financeiro, iintegrei equipes de desenvolvimento para cliente como
+            financeiro, integrei equipes de desenvolvimento para cliente como
             como Banco do Brasil, Banco Original e MoneyPag. Desenvolvi e
             implementei soluções IOT em um projeto pessoal na REDGTECH Automação
             que resultaram em um faturamento superior a R$ 1,5 milhão em vendas
