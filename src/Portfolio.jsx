@@ -173,6 +173,13 @@ const projects = [
       "Plataforma de monitoramento remoto do paciente oncológico para maior assertividade ao tratamento. Fundada por médicos oncologistas com ampla experiência na área.",
     link: "/project/3",
     imageUrl: "/thummi-card.png"
+  },
+  {
+    title: "Prodgius",
+    description:
+      "Sistema inteligente de controle de estoque com IA para otimização automática de inventário, previsão de demanda e gestão inteligente de suprimentos para empresas.",
+    link: "/project/4",
+    imageUrl: "/Logoprodigius.png"
   }
 ]
 
@@ -220,17 +227,7 @@ export default function Portfolio() {
       <PortfolioSection>
         <Title>Contato</Title>
         <AboutSection>
-          <Subtitle>
-            Você pode entrar em contato comigo pelo e-mail{" "}
-            <strong>luannnvg@gmail.com</strong> ou através do telefone
-            <WhatsAppLink
-              href="https://wa.me/5571985439973"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaWhatsapp size={20} /> (71) 9 8543-9973
-            </WhatsAppLink>
-          </Subtitle>
+          <Subtitle>Meus Contatos <strong>luan.dev97@gmail.com</strong> e <WhatsAppLink href="https://wa.me/5571985439973" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} /> (71) 9 8543-9973</WhatsAppLink></Subtitle>
         </AboutSection>
       </PortfolioSection>
     </div>

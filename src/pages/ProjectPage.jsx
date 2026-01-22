@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import styled from "styled-components"; // Importando styled-components
+import projectsData from "../data/projects.json";
 
 // Definir fontes e cores
 const fonts = {
@@ -91,6 +92,9 @@ const Media = styled.div`
   overflow: hidden;
   transition: transform 0.3s ease;
   background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     transform: scale(1.05);
@@ -100,9 +104,11 @@ const Media = styled.div`
   img,
   video,
   iframe {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para as imagens e vídeos da galeria */
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Mantém a proporção das imagens e vídeos */
   }
 `;
 
@@ -152,77 +158,7 @@ const LinkButton = styled.a`
 
 const ProjectPage = () => {
   const { id } = useParams(); // Pega o id do projeto a partir da URL
-
-  const project = {
-    1: {
-      title: "Redgtech Automação",
-      description: `Desenvolvi um aplicativo híbrido (Android/iOS) utilizando React Native, com o objetivo de proporcionar um controle eficiente e prático de placas de automação. Esse sistema é projetado para gerenciar dispositivos como lâmpadas, portões, níveis de água e outros dispositivos em prédios residenciais e comerciais. Além disso, criei uma página web intuitiva para o gerenciamento completo do sistema, permitindo aos usuários configurar e monitorar facilmente suas automações.`,
-      images: [
-        "https://redgtech.com.br/wp-content/uploads/2020/04/IMG_5825.png",
-        "https://redgtech.com.br/wp-content/uploads/2020/03/WhatsApp-Image-2023-02-18-at-07.41.59.jpeg",
-        "https://redgtech.com.br/wp-content/uploads/2020/03/IMG_3939.png",
-        "https://redgtech.com.br/wp-content/uploads/2020/02/WhatsApp-Image-2023-10-13-at-14.01.34-scaled.jpeg",
-        "https://redgtech.com.br/wp-content/uploads/2023/01/landing-page-1024x600.png",
-        "https://redgtech.com.br/wp-content/uploads/2020/02/IMG-20220608-WA0020.jpg",
-        "/monitoring.png",
-      ],
-      videos: [
-        "https://www.youtube.com/watch?v=Ni0x-BoSiqY",
-        "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6987094896239087617?compact=1", // Adicionando o vídeo do LinkedIn
-      ],
-      links: {
-        website: "https://redgtech.com.br",
-        playStore:
-          "https://play.google.com/store/apps/details?id=com.redgtech&hl=pt_BR",
-        appleStore:
-          "https://apps.apple.com/br/app/redgtech-automa%C3%A7%C3%A3o/id1565631105",
-      },
-    },
-    2: {
-      title: "Intelbras",
-      description: `Desenvolvimento da página web que funciona para o controle de funcionalidades dos roteadores Intelbras onde o usuário pode ter total controle
-sobre a distribuição de banda e conectividade wi-fi do seu roteador assim foram atualizados 1.335 dispositivos com essa melhoria`,
-      images: [
-        "https://i.ytimg.com/vi/vQiBfxDbWVI/maxresdefault.jpg",
-        "/intelbras1.png",
-        "/intelbras2.png",
-        "/intelbras3.png",
-      ],
-      videos: [
-        "https://www.youtube.com/watch?v=vQiBfxDbWVI",
-        "https://www.youtube.com/watch?v=A3gUETqQGrw",
-      ],
-
-      links: {
-        website: "https://thummi.global/",
-        playStore:
-          "https://play.google.com/store/apps/details?id=com.thummi&hl=pt_PT",
-        appleStore: "https://apps.apple.com/br/app/thummi/id1581842785",
-      },
-    },
-    3: {
-      title: "Thummi",
-      description:
-        "Na página de monitoramento, implementei atualizações importantes para facilitar a visualização de dados médicos e o acompanhamento do progresso no tratamento. Agora, os pacientes e profissionais de saúde podem acessar informações vitais de forma mais ágil e organizada, com recursos adicionais para personalização de relatórios e alertas.",
-      images: [
-        "https://www.boqnews.com/wp-content/uploads/2021/10/thummi-2.png",
-        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/07/3f/25/073f255b-99e4-571b-f7e5-81d468be66b6/666331d4-6d16-40de-b595-e26cf764b8ac_Menu.png/300x0w.jpg",
-        "https://thummi.global/wp-content/uploads/2021/08/iPhone-15-Pro.png",
-      ],
-      videos: [
-        "http://thummi.global/wp-content/uploads/2023/12/home_thummi_desktop.mp4",
-        "https://www.youtube.com/watch?v=MPL9LW6Ifw4",
-      ],
-
-      links: {
-        website: "https://thummi.global/",
-        playStore:
-          "https://play.google.com/store/apps/details?id=com.thummi&hl=pt_PT",
-        appleStore: "https://apps.apple.com/br/app/thummi/id1581842785",
-      },
-    },
-  };
-  const projectData = project[id];
+  const projectData = projectsData.find((project) => project.id === Number(id));
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
@@ -250,6 +186,7 @@ sobre a distribuição de banda e conectividade wi-fi do seu roteador assim fora
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           scrolling="no"
+          style={{ width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%" }}
         />
       );
     }
@@ -257,16 +194,15 @@ sobre a distribuição de banda e conectividade wi-fi do seu roteador assim fora
       return (
         <iframe
           src={url}
-          height="399"
-          width="504"
           frameBorder="0"
           allowFullScreen
           title="Publicação incorporada"
           scrolling="no"
+          style={{ width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%" }}
         />
       );
     }
-    return <video src={url} controls autoPlay />;
+    return <video src={url} controls autoPlay style={{ width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%" }} />;
   };
 
   if (!projectData) {
@@ -313,12 +249,16 @@ sobre a distribuição de banda e conectividade wi-fi do seu roteador assim fora
         <LinkButton href={projectData.links.website} target="_blank">
           Site
         </LinkButton>
-        <LinkButton href={projectData.links.playStore} target="_blank">
-          Play Store
-        </LinkButton>
-        <LinkButton href={projectData.links.appleStore} target="_blank">
-          Apple Store
-        </LinkButton>
+        {projectData.links.playStore && (
+          <LinkButton href={projectData.links.playStore} target="_blank">
+            Play Store
+          </LinkButton>
+        )}
+        {projectData.links.appleStore && (
+          <LinkButton href={projectData.links.appleStore} target="_blank">
+            Apple Store
+          </LinkButton>
+        )}
       </LinksSection>
 
       {/* Modal para exibir a mídia expandida */}
