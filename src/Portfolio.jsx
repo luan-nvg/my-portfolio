@@ -1,8 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import { Link } from "react-router-dom"
-import { FaWhatsapp } from "react-icons/fa"
+import { FaWhatsapp, FaEnvelope } from "react-icons/fa"
 
 // Definir fontes e cores
 const fonts = {
@@ -112,6 +112,137 @@ const Subtitle = styled.h3`
   }
 `
 
+const ContactSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Altera a direção para coluna em telas pequenas */
+    align-items: center;
+    gap: 20px;
+  }
+`
+
+const ContactItem = styled(motion.a)`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: ${colors.descriptionText};
+  font-family: ${fonts.secondary};
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+  }
+`
+
+const EmailButtonWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+`
+
+const EmailButton = styled(motion.button)`
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  color: #d44638;
+  font-family: ${fonts.secondary};
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-color: #d44638;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+  }
+`
+
+const Toast = styled(motion.div)`
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-family: ${fonts.secondary};
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 1000;
+  white-space: nowrap;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #4caf50;
+  }
+
+  @media (max-width: 768px) {
+    bottom: calc(100% + 8px);
+    font-size: 0.85rem;
+    padding: 10px 16px;
+  }
+`
+
+const WhatsAppLink = styled(ContactItem)`
+  color: #25d366;
+
+  &:hover {
+    border-color: #25d366;
+    color: #25d366;
+  }
+`
+
+const ContactIcon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+`
+
+const ContactText = styled.span`
+  font-weight: 500;
+`
+
 const ProfileImage = styled.img`
   width: 250px;
   height: 250px;
@@ -140,17 +271,6 @@ const AboutSection = styled.div`
   }
 `
 
-const WhatsAppLink = styled.a`
-  color: #25d366;
-  font-weight: bold;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  &:hover {
-    text-decoration: underline;
-  }
-`
 
 const projects = [
   {
@@ -184,6 +304,22 @@ const projects = [
 ]
 
 export default function Portfolio() {
+  const [showToast, setShowToast] = useState(false)
+
+  const copyEmailToClipboard = async () => {
+    const email = "luan.dev97@gmail.com"
+    try {
+      await navigator.clipboard.writeText(email)
+      setShowToast(true)
+      setTimeout(() => {
+        setShowToast(false)
+      }, 3000)
+    } catch (err) {
+      console.error("Erro ao copiar email:", err)
+      alert("Erro ao copiar email. Por favor, copie manualmente: " + email)
+    }
+  }
+
   return (
     <div>
       <PortfolioSection>
@@ -225,10 +361,46 @@ export default function Portfolio() {
       </PortfolioSection>
 
       <PortfolioSection>
-        <Title>Contato</Title>
-        <AboutSection>
-          <Subtitle>Meus Contatos <strong>luan.dev97@gmail.com</strong> e <WhatsAppLink href="https://wa.me/5571985439973" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} /> (71) 9 8543-9973</WhatsAppLink></Subtitle>
-        </AboutSection>
+        <Title>Contatos</Title>
+        <ContactSection>
+          <EmailButtonWrapper>
+            <AnimatePresence>
+              {showToast && (
+                <Toast
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                >
+                  Copiado com sucesso!
+                </Toast>
+              )}
+            </AnimatePresence>
+            <EmailButton
+              onClick={copyEmailToClipboard}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <ContactIcon>
+                <FaEnvelope />
+              </ContactIcon>
+              <ContactText>luan.dev97@gmail.com</ContactText>
+            </EmailButton>
+          </EmailButtonWrapper>
+          <WhatsAppLink
+            href="https://wa.me/5571985439973"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <ContactIcon>
+              <FaWhatsapp />
+            </ContactIcon>
+            <ContactText>(71) 9 8543-9973</ContactText>
+          </WhatsAppLink>
+        </ContactSection>
       </PortfolioSection>
     </div>
   )
