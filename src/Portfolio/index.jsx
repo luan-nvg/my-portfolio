@@ -32,6 +32,14 @@ const PROJECTS = [
     imageFit: "contain"
   },
   {
+    title: "Coopera · FCG Edu",
+    description:
+      "Desenvolvi app iOS e portal web para cadastro e candidatura a vagas — conectando alunos e empresas de Capim Grosso.",
+    link: "/project/8",
+    imageUrl: "/coopera-app-home.jpg",
+    imageFit: "contain"
+  },
+  {
     title: "SESI · Pagamentos Cielo",
     description:
       "Contribuí no app de pagamentos do SESI com integração Cielo — fluxo de títulos, confirmação na maquineta e recibo no balcão.",

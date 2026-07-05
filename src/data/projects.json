@@ -123,5 +123,20 @@
     "links": {
       "website": "https://www.magazineluiza.com.br/"
     }
+  },
+  {
+    "id": 8,
+    "title": "Coopera · FCG Edu",
+    "description": "Desenvolvi o app mobile (iOS) e o portal web do Coopera para a Faculdade Capim Grosso — plataforma que conecta candidatos e empresas da região. O fluxo permite cadastro, currículo, busca de vagas e candidatura pelo celular, com acesso web em coopera.fcgedu.com.br para login e gestão.",
+    "images": [
+      "/coopera-app-home.jpg",
+      "/coopera-app-jobs.jpg",
+      "/coopera-portal.png"
+    ],
+    "videos": [],
+    "links": {
+      "website": "https://coopera.fcgedu.com.br/",
+      "appleStore": "https://apps.apple.com/br/app/coopera-fcgedu/id6764136758"
+    }
   }
 ]
