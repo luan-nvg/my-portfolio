@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Redgtech Automação",
-    "description": "Desenvolvi um aplicativo híbrido (Android/iOS) utilizando React Native, com o objetivo de proporcionar um controle eficiente e prático de placas de automação. Esse sistema é projetado para gerenciar dispositivos como lâmpadas, portões, níveis de água e outros dispositivos em prédios residenciais e comerciais. Além disso, criei uma página web intuitiva para o gerenciamento completo do sistema, permitindo aos usuários configurar e monitorar facilmente suas automações.",
+    "description": "Desenvolvi um aplicativo híbrido (Android/iOS) com React Native para controlar placas de automação em prédios residenciais e comerciais — lâmpadas, portões, níveis de água e outros dispositivos. Também criei o painel web para configurar e monitorar tudo de forma intuitiva.",
     "images": [
       "https://redgtech.com.br/wp-content/uploads/2020/04/IMG_5825.png",
       "https://redgtech.com.br/wp-content/uploads/2020/03/WhatsApp-Image-2023-02-18-at-07.41.59.jpeg",
@@ -25,7 +25,7 @@
   {
     "id": 2,
     "title": "Intelbras",
-    "description": "Desenvolvimento da página web que funciona para o controle de funcionalidades dos roteadores Intelbras onde o usuário pode ter total controle sobre a distribuição de banda e conectividade wi-fi do seu roteador assim foram atualizados 1.335 dispositivos com essa melhoria",
+    "description": "Desenvolvi a interface web embarcada para controle de roteadores Intelbras — distribuição de banda, Wi-Fi e conectividade. Com essa entrega, ajudei a levar a melhoria para mais de 1.300 dispositivos.",
     "images": [
       "https://i.ytimg.com/vi/vQiBfxDbWVI/maxresdefault.jpg",
       "/intelbras1.png",
@@ -45,7 +45,7 @@
   {
     "id": 3,
     "title": "Thummi",
-    "description": "Na página de monitoramento, implementei atualizações importantes para facilitar a visualização de dados médicos e o acompanhamento do progresso no tratamento. Agora, os pacientes e profissionais de saúde podem acessar informações vitais de forma mais ágil e organizada, com recursos adicionais para personalização de relatórios e alertas.",
+    "description": "Na página de monitoramento, implementei melhorias para facilitar a visualização de dados médicos e o acompanhamento do tratamento. Pacientes e profissionais de saúde passaram a acessar informações vitais de forma mais ágil, com relatórios e alertas personalizáveis.",
     "images": [
       "https://www.boqnews.com/wp-content/uploads/2021/10/thummi-2.png",
       "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/07/3f/25/073f255b-99e4-571b-f7e5-81d468be66b6/666331d4-6d16-40de-b595-e26cf764b8ac_Menu.png/300x0w.jpg",
@@ -64,14 +64,34 @@
   {
     "id": 4,
     "title": "Prodgius",
-    "description": "Sistema inteligente de controle de estoque com IA para otimização automática de inventário, previsão de demanda e gestão inteligente de suprimentos para empresas.",
+    "description": "Desenvolvo full-stack o Prodgius Hub (manager.prodgius.com.br): plataforma multi-empresa com estoque, PDV, Kanban de projetos, equipes, compliance e relatórios. Uso React, Node.js e MongoDB, com layout mobile-first e desktop.",
     "images": [
-      "https://prodgius.com.br/estoque.png",
-      "https://prodgius.com.br/kanban.png"
+      "/prodgius-hub-landing.png",
+      "/prodgius-planning.png",
+      "/prodgius-kanban-board.png"
     ],
     "videos": [],
     "links": {
-      "website": "https://prodgius.com.br/"
+      "website": "https://prodgius.com.br/",
+      "app": "https://manager.prodgius.com.br/"
+    }
+  },
+  {
+    "id": 5,
+    "title": "SESI · Pagamentos Cielo",
+    "description": "Desenvolvi aplicativo mobile de pagamentos para o SESI, com integração à maquineta Cielo. O fluxo permite selecionar títulos, processar crédito ou débito na maquineta, confirmar a transação e exibir recibo — com feedback visual claro para quem opera no balcão.",
+    "images": [
+      "/sesi-pagamento.png",
+      "/sesi-maquineta.png",
+      "/sesi-identidade.png",
+      "/sesi-titulos.png",
+      "/sesi-carrinho.png"
+    ],
+    "videos": [
+      "https://youtube.com/shorts/j7FdqEut_YQ"
+    ],
+    "links": {
+      "website": "https://youtube.com/shorts/j7FdqEut_YQ"
     }
   }
 ]

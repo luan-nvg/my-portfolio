@@ -1,17 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Portfolio from './Portfolio'; // O componente de portfólio com os cards
-import ProjectPage from './pages/ProjectPage'; // Página do projeto
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import PageLayout from "./components/PageLayout"
+import Portfolio from "./Portfolio"
+import ProjectPage from "./pages/ProjectPage"
 
-const App = () => {
+export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Portfolio />} /> {/* Página principal com os projetos */}
-        <Route path="/project/:id" element={<ProjectPage />} /> {/* Rota para página de projeto individual */}
+        <Route element={<PageLayout />}>
+          <Route path="/" element={<Portfolio />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
+        </Route>
       </Routes>
     </Router>
-  );
-};
-
-export default App;
+  )
+}
