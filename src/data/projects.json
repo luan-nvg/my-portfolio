@@ -81,11 +81,11 @@
     "title": "SESI · Pagamentos Cielo",
     "description": "Desenvolvi aplicativo mobile de pagamentos para o SESI, com integração à maquineta Cielo. O fluxo permite selecionar títulos, processar crédito ou débito na maquineta, confirmar a transação e exibir recibo — com feedback visual claro para quem opera no balcão.",
     "images": [
-      "/sesi-pagamento.png",
-      "/sesi-maquineta.png",
       "/sesi-identidade.png",
       "/sesi-titulos.png",
-      "/sesi-carrinho.png"
+      "/sesi-carrinho.png",
+      "/sesi-maquineta.png",
+      "/sesi-pagamento.png"
     ],
     "videos": [
       "https://youtube.com/shorts/j7FdqEut_YQ"

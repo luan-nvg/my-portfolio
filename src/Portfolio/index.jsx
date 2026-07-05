@@ -28,7 +28,7 @@ const PROJECTS = [
     description:
       "Desenvolvi app mobile de pagamentos para o SESI com integração à maquineta Cielo — títulos, confirmação e recibo no balcão.",
     link: "/project/5",
-    imageUrl: "/sesi-pagamento.png",
+    imageUrl: "/sesi-maquineta.png",
     imageFit: "contain"
   },
   {
