@@ -16,9 +16,17 @@ const SKILLS = [
 
 const PROJECTS = [
   {
+    title: "Magazine Luiza · E-commerce",
+    description:
+      "Contribuo no e-commerce com Next.js — performance, SEO e ferramenta de templates que acelera a publicação de páginas pelo time.",
+    link: "/project/7",
+    imageUrl: "/magalu-site-home-live.png",
+    imageFit: "contain"
+  },
+  {
     title: "Prodgius Hub",
     description:
-      "Desenvolvo o Hub de estoque, PDV, Kanban e gestão operacional. React, Node.js e MongoDB, com layout mobile-first.",
+      "Desenvolvi o Hub de estoque, PDV, Kanban e gestão operacional. React, Node.js e MongoDB, com layout mobile-first.",
     link: "/project/4",
     imageUrl: "/prodgius-hub-landing.png",
     imageFit: "contain"
@@ -26,9 +34,17 @@ const PROJECTS = [
   {
     title: "SESI · Pagamentos Cielo",
     description:
-      "Desenvolvi app mobile de pagamentos para o SESI com integração à maquineta Cielo — títulos, confirmação e recibo no balcão.",
+      "Contribuí no app de pagamentos do SESI com integração Cielo — fluxo de títulos, confirmação na maquineta e recibo no balcão.",
     link: "/project/5",
     imageUrl: "/sesi-maquineta.png",
+    imageFit: "contain"
+  },
+  {
+    title: "MoneyPag",
+    description:
+      "Atuei no app mobile da fintech — fluxos de pagamento, recargas e integração com cartão Elo.",
+    link: "/project/6",
+    imageUrl: "/moneypag-app.jpg",
     imageFit: "contain"
   },
   {
@@ -41,7 +57,7 @@ const PROJECTS = [
   {
     title: "Intelbras",
     description:
-      "Desenvolvi interface web embarcada para gestão de roteadores — banda, Wi-Fi e conectividade em mais de 1.300 dispositivos.",
+      "Atuei na interface web embarcada dos roteadores — banda, Wi-Fi e conectividade em mais de 1.300 dispositivos.",
     link: "/project/2",
     imageUrl: "/intelbras-card.png"
   },
@@ -140,11 +156,12 @@ export default function Portfolio() {
           <S.AboutBody>
             <S.AboutText>
               Trabalho há mais de 10 anos com React, React Native, Node.js e
-              MongoDB. Já integrei squads em projetos para Banco do Brasil,
-              Banco Original e MoneyPag. Na Redgtech Automação, atuo como
-              desenvolvedor full-stack no ecossistema IoT — app mobile, APIs e
-              painel web. Na Prodgius, desenvolvo o Hub de estoque, PDV e
-              gestão operacional, com foco em arquitetura front-end, APIs e
+              MongoDB. Atualmente atuo no e-commerce da Magazine Luiza, com
+              Next.js, performance, acessibilidade e SEO. Já integrei squads em
+              projetos para Banco do Brasil, Banco Original e MoneyPag. Na
+              Redgtech Automação, desenvolvi o ecossistema IoT — app mobile,
+              APIs e painel web. Na Prodgius, desenvolvi o Hub de estoque, PDV
+              e gestão operacional, com foco em arquitetura front-end, APIs e
               experiência mobile-first.
             </S.AboutText>
             <S.SkillList>
@@ -160,10 +177,11 @@ export default function Portfolio() {
         <S.SectionInner>
           <S.SectionHead>
             <S.SectionTag>Portfólio</S.SectionTag>
-            <S.SectionTitle>Projetos que desenvolvi</S.SectionTitle>
+            <S.SectionTitle>Experiências profissionais</S.SectionTitle>
             <S.SectionLead>
-              Alguns projetos que entreguei — do mobile ao back-end, todos em
-              produção e com impacto real no dia a dia.
+              Empresas e produtos em que atuei — minha participação incluiu
+              novos fluxos, correções e melhorias em produção, do mobile ao
+              back-end.
             </S.SectionLead>
           </S.SectionHead>
 

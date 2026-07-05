@@ -25,7 +25,7 @@
   {
     "id": 2,
     "title": "Intelbras",
-    "description": "Desenvolvi a interface web embarcada para controle de roteadores Intelbras — distribuição de banda, Wi-Fi e conectividade. Com essa entrega, ajudei a levar a melhoria para mais de 1.300 dispositivos.",
+    "description": "Atuei no desenvolvimento da interface web embarcada para controle de roteadores Intelbras — distribuição de banda, Wi-Fi e conectividade. A melhoria chegou a mais de 1.300 dispositivos.",
     "images": [
       "https://i.ytimg.com/vi/vQiBfxDbWVI/maxresdefault.jpg",
       "/intelbras1.png",
@@ -64,7 +64,7 @@
   {
     "id": 4,
     "title": "Prodgius",
-    "description": "Desenvolvo full-stack o Prodgius Hub (manager.prodgius.com.br): plataforma multi-empresa com estoque, PDV, Kanban de projetos, equipes, compliance e relatórios. Uso React, Node.js e MongoDB, com layout mobile-first e desktop.",
+    "description": "Desenvolvi full-stack o Prodgius Hub (manager.prodgius.com.br): plataforma multi-empresa com estoque, PDV, Kanban de projetos, equipes, compliance e relatórios. Stack com React, Node.js e MongoDB, com layout mobile-first e desktop.",
     "images": [
       "/prodgius-hub-landing.png",
       "/prodgius-planning.png",
@@ -79,7 +79,7 @@
   {
     "id": 5,
     "title": "SESI · Pagamentos Cielo",
-    "description": "Desenvolvi aplicativo mobile de pagamentos para o SESI, com integração à maquineta Cielo. O fluxo permite selecionar títulos, processar crédito ou débito na maquineta, confirmar a transação e exibir recibo — com feedback visual claro para quem opera no balcão.",
+    "description": "Contribuí no aplicativo mobile de pagamentos do SESI, com integração à maquineta Cielo. Trabalhei no fluxo de seleção de títulos, processamento de crédito ou débito na maquineta, confirmação da transação e exibição de recibo — com feedback visual para quem opera no balcão.",
     "images": [
       "/sesi-identidade.png",
       "/sesi-titulos.png",
@@ -92,6 +92,36 @@
     ],
     "links": {
       "website": "https://youtube.com/shorts/j7FdqEut_YQ"
+    }
+  },
+  {
+    "id": 6,
+    "title": "MoneyPag",
+    "description": "Atuei como desenvolvedor no app mobile da MoneyPag, fintech de conta digital e pagamentos do Nordeste. Participei de fluxos de transferências, recargas, pagamentos e integração com cartão Elo — incluindo o cartão sem número impresso, com dados acessíveis só pelo app. Foco em segurança, UX de transações financeiras e entrega em ambiente de alta exigência regulatória.",
+    "images": [
+      "/moneypag-app.jpg",
+      "/moneypag-press-card.jpg",
+      "/moneypag-elo-launch.jpg",
+      "/moneypag-conta-digital.jpg",
+      "/moneypag-card.jpg"
+    ],
+    "videos": [],
+    "links": {
+      "website": "https://www.instagram.com/moneypag/"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Magazine Luiza · E-commerce",
+    "description": "Atuo no e-commerce da Magazine Luiza (Tecla T/Magalu), com foco em performance, acessibilidade e SEO em Next.js. Entre as entregas, participei do desenvolvimento de um gerador de templates de componentes que ajudou o time a publicar páginas dinâmicas com mais agilidade — impactando mais de 500 telas. Também contribuo com componentes de marketplace e filtros de busca por produto, priorizando escalabilidade e performance nas funcionalidades críticas da plataforma.",
+    "images": [
+      "/magalu-site-home.png",
+      "/magalu-site-home-live.png",
+      "/magalu-site-product.png"
+    ],
+    "videos": [],
+    "links": {
+      "website": "https://www.magazineluiza.com.br/"
     }
   }
 ]
