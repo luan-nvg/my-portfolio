@@ -64,7 +64,7 @@
   {
     "id": 4,
     "title": "Prodgius",
-    "description": "Desenvolvi full-stack o Prodgius Hub (manager.prodgius.com.br): plataforma multi-empresa com estoque, PDV, Kanban de projetos, equipes, compliance e relatórios. Stack com React, Node.js e MongoDB, com layout mobile-first e desktop.",
+    "description": "Desenvolvi a plataforma multi-empresa do zero — estoque, PDV, Kanban de projetos, equipes, compliance e relatórios. Atuei full-stack com React, Node.js e MongoDB, com layout mobile-first e desktop.",
     "images": [
       "/prodgius-hub-landing.png",
       "/prodgius-planning.png",
@@ -79,7 +79,7 @@
   {
     "id": 5,
     "title": "SESI · Pagamentos Cielo",
-    "description": "Contribuí no aplicativo mobile de pagamentos do SESI, com integração à maquineta Cielo. Trabalhei no fluxo de seleção de títulos, processamento de crédito ou débito na maquineta, confirmação da transação e exibição de recibo — com feedback visual para quem opera no balcão.",
+    "description": "Desenvolvi o aplicativo mobile de pagamentos do SESI, com integração à maquineta Cielo. O fluxo cobre seleção de títulos, processamento de crédito ou débito na maquineta, confirmação da transação e exibição de recibo — com feedback visual para quem opera no balcão.",
     "images": [
       "/sesi-identidade.png",
       "/sesi-titulos.png",
@@ -127,7 +127,7 @@
   {
     "id": 8,
     "title": "Coopera · FCG Edu",
-    "description": "Desenvolvi o app mobile (iOS) e o portal web do Coopera para a Faculdade Capim Grosso — plataforma que conecta candidatos e empresas da região. O fluxo permite cadastro, currículo, busca de vagas e candidatura pelo celular, com acesso web em coopera.fcgedu.com.br para login e gestão.",
+    "description": "Adaptei o site mobile do Coopera (Faculdade Capim Grosso) para React Native no iOS e publiquei na App Store. A plataforma conecta alunos e empresas da região — com cadastro, currículo, busca de vagas e candidatura pelo app.",
     "images": [
       "/coopera-app-home.jpg",
       "/coopera-app-jobs.jpg",

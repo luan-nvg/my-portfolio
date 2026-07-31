@@ -34,7 +34,7 @@ const PROJECTS = [
   {
     title: "Coopera · FCG Edu",
     description:
-      "Desenvolvi app iOS e portal web para cadastro e candidatura a vagas — conectando alunos e empresas de Capim Grosso.",
+      "Adaptei o site mobile existente para React Native iOS e publiquei na App Store — cadastro e candidatura a vagas entre alunos e empresas de Capim Grosso.",
     link: "/project/8",
     imageUrl: "/coopera-app-home.jpg",
     imageFit: "contain"
@@ -42,7 +42,7 @@ const PROJECTS = [
   {
     title: "SESI · Pagamentos Cielo",
     description:
-      "Contribuí no app de pagamentos do SESI com integração Cielo — fluxo de títulos, confirmação na maquineta e recibo no balcão.",
+      "Desenvolvi o app de pagamentos do SESI com integração Cielo — fluxo de títulos, confirmação na maquineta e recibo no balcão.",
     link: "/project/5",
     imageUrl: "/sesi-maquineta.png",
     imageFit: "contain"
